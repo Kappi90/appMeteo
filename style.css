@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: aliceblue;
+  }
+  
+  .slider-container {
+    position: relative;
+    height: 100vh;
+    display: inline-flex;
+    overflow: hidden;
+    scrollbar-width: none;
+    transform: translateX(0);
+    will-change: transform;
+    transition: transform 0.3s ease-out;   
+  }
+  
+  .slide{
+    position: relative;
+    max-height: 100vh;
+    width: 100vw; 
+  }
+
+  .citySlide{  
+    width: 100vw;
+    height: 100%;
+    padding: 2%;
+    text-align: center;
+    background-color: rgb(75, 201, 201);
+  }
+
+  .grabbing {
+    cursor: grabbing;
+  }
+
+  .city1, .city2, .city3, .city4, .city5{
+    width: 100%;
+    height: 40%;
+    padding: 2%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-content: space-around;
+    padding: 0;
+  }
+  .contenitore1, .contenitore2, .contenitore3, .contenitore4, .contenitore5{
+    position: relative;
+    width: 100%;
+    height: 40%;
+  }
+
+  .iconaTempo{
+    width: 25vw;
+    height: 15vh;
+  }
+  
+  .citta{
+    width: 100%;
+    font-size: 8vw;
+    font-size: 8vh;
+    color: #ffffff;
+    text-shadow: 0px -5px 20px rgba(0,0,0,1);
+  }
+
+  .descrizioneTempo{
+    display: none;
+  }
+
+ .temperatura{
+    width: 100%;
+    font-size: 9vw;
+    font-size: 9vh; 
+    color: #ffffff; 
+    text-shadow: 0px -5px 20px rgba(0,0,0,1);
+  }
+
+  .temperatura-maxMin{
+    height: 30px;
+    width: 100%;
+    font-size: 3vw;
+    font-size: 3vh; 
+    color: #000000;
+    font-weight: bold;
+    text-shadow: 0px -5px 20px rgb(255, 255, 255);
+  }
+
+  #meteoContainer{
+    height: 55%;
+    width: 100%;       
+    padding-left: 1%;
+    padding-right: 1%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(40, 97, 97, 0.622);
+    margin-top: 5%;
+  }
+  
+  .meteo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 14%;
+    width: 100%;
+    border-bottom: 1px solid rgb(48, 47, 47);
+    color: #ffffff;
+  }
+  
+  .giorno{
+    width: 50px;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .imgClass{
+    height: 50px;
+    width: 50px;
+  }
+  
+  .minValues{
+    text-align: center;
+    display: inline;
+    font-size: 18px;
+  }
+  
+  .maxValues{
+    text-align: center;
+    display: inline;
+    font-size: 18px;
+  }
+
+
+
+  @media(min-width: 768px){
+    
+    .slide{
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .citySlide{
+      border: 1px solid black;
+      width: 700px;
+      height: 95vh;
+    }
+  
+    .iconaTempo{
+      width: 8vw;
+      height: 12vh;
+    }
+  
+    .descrizioneTempo{
+      width: 100%;
+      font-size: 2vw;
+      font-size: 2vh;
+      text-transform: uppercase;
+      display: block;
+      text-shadow: 0px -5px 20px rgb(255, 255, 255);
+    }
+  
+    #meteoContainer{
+      height: 55%;
+      width: 100%;       
+      padding-left: 1%;
+      padding-right: 1%;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(40, 97, 97, 0.622);
+      margin-top: 50px;
+    }
+    
+    .giorno{
+      width: 50px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  
+    .imgClass{
+      height: 70px;
+      width: 70px;
+    }
+    
+    .minValues{
+      text-align: center;
+      display: inline;
+      font-size: 20px;
+    }
+    
+    
+    .maxValues{
+      text-align: center;
+      display: inline;
+      font-size: 20px;
+    }
+  }
